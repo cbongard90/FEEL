@@ -4,10 +4,10 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   get 'about', to: 'pages#about'
   get 'contact', to: 'pages#contact'
-  resources :boxes
+  resources :boxes, path: :capsules
   resources :receivers
   resources :locations
-  resources :packages
+  resources :packages, path: :pricings
   resources :timesheets
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
