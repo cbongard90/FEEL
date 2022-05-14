@@ -1,6 +1,9 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: rgb(0, 0, 0);
+  // background: transparent;
+  position: sticky;
+  top: 0;
+  z-index: 5;
 
   .avatar-bordered {
     width: 40px;
