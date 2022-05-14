@@ -12,11 +12,13 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
   </head>
 
-  <body>
+  <body >
+  <div class="min-vh-100">
     <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
     <%= flash[:error] %>
     <%= yield %>
+  </div>
 
     <%= render 'shared/footer' %>
   </body>

@@ -21,30 +21,9 @@
   </div>
 </div>
 
-<%= link_to 'Start your legacy', new_box_path, class: "btn btn-primary btn-block" %>
+<%= link_to 'Start your legacy', begin_path, class: "btn btn-primary btn-block" %>
 
-<h2 class="text-center">Decide where to share</h2>
-<div class="container">
-  <div class="cards">
-    <%= link_to new_location_path(:type => "earth") do %>
-      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= image_path 'earth.jpg' %>)">
-        Earth
-      </div>
-    <% end %>
 
-    <%= link_to new_location_path(:type => "outer space") do %>
-      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= image_path 'outerspace.jpg' %>)">
-        Outer Space
-      </div>
-    <% end %>
-
-    <%= link_to new_location_path(:type => "metaverse") do %>
-      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= image_path 'metaverse.jpg' %>)">
-        MetaVerse
-      </div>
-    <% end %>
-  </div>
-</div>
 
 
 <%= link_to "Home", root_path %>
