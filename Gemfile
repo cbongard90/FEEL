@@ -30,6 +30,17 @@ gem 'bootsnap', '>= 1.4.4', require: false
 
 gem 'devise'
 
+gem 'actiontext'
+gem 'faker'
+gem 'pg_search'
+gem "simple_calendar"
+gem 'pundit'
+gem 'cloudinary'
+gem 'rails_admin'
+gem 'twilio-ruby'
+gem 'geocoder'
+
+
 gem 'autoprefixer-rails', '10.2.5'
 gem 'font-awesome-sass', '~> 5.6.1'
 gem 'simple_form', github: 'heartcombo/simple_form'
