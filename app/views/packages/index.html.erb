@@ -4,16 +4,16 @@
 
 <h3>Earth Packages</h3>
 <ul>
-<% @packages.each do |package|%>
-  <% if package.package_type == "earth" %>
-    <li>
-      <p>
-        <%= package.size %>
-        <%= package.base_price %>
-      </p>
-    </li>
+  <% @packages.each do |package|%>
+    <% if package.package_type == "earth" %>
+      <li>
+        <p>
+          <%= package.size %>
+          <%= package.base_price %>
+        </p>
+      </li>
+    <% end %>
   <% end %>
-<% end %>
 </ul>
 
 <h3>Outer Space Packages</h3>
