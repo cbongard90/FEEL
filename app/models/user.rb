@@ -5,4 +5,9 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :boxes
   has_many :receivers, through: :boxes
+
+  ##...Avatar Attachment...##
+  has_one_attached :avatar
+
+
 end
