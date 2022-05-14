@@ -1,0 +1,6 @@
+# config/meta.yml
+
+meta_product_name: "Feel"
+meta_title: "Feel - CREATE YOUR DIGITAL LEGACY"
+meta_description: "You can create your own Time Capsule today, easily, safely and securely."
+meta_image: "cover.png" # should exist in `app/assets/images/`
