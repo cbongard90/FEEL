@@ -1,6 +1,8 @@
 <div class="form-item p-4">
   <%= simple_form_for ([@box]) do |f| %>
     <%= f.input :message %>
+    <%= f.input :is_public %>
+    <%= f.input :receiver_name %>
     <%= f.submit class:"btn btn-flat btn-lg btn-block"%>
   <% end %>
 </div>
