@@ -2,8 +2,7 @@
     background: linear-gradient(-45deg,#5Ae3ed,#9263E3);
     height: 90vh;
     h1 {
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 700;
+        @include main-header-style
     }
 }
 .card-icon {

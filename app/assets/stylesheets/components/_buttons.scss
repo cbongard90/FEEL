@@ -1,0 +1,16 @@
+.main-cta {
+    @include main-cta-color
+}
+
+.main-cta-w {
+    @include main-cta-w
+}
+
+
+.secondary-cta {
+    @include secondary-cta
+}
+
+.secondary-cta-w {
+    @include secondary-cta-w
+}
