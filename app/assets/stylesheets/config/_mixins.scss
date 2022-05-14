@@ -1,0 +1,29 @@
+@mixin main-header-style {
+    color: $primaryColor;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 7rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+@mixin main-header-style-w {
+    color: $white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 7rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+@mixin secondary-header-style {
+    color: $primaryColor;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+@mixin secondary-header-style-w {
+    color: $white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+}
