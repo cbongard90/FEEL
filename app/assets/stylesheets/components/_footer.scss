@@ -13,6 +13,17 @@
     width: 100%;
     box-shadow: 0 0 15px rgba(0,0,0,0.1);
 
+    @media screen and (max-width: 640px) {
+        flex-direction: column-reverse;
+        justify-content: space-around;
+    }
+
+    .footer-copyright {
+        @media screen and (max-width: 425px) {
+            font-size: .85rem;
+        }
+    }
+
     .footer-links {
         display: flex;
         align-items: center;
