@@ -87,5 +87,5 @@ function initTextAnimation(sentences, typingInterval = 100, sentenceInterval = 2
 // 2ème param (optionnel) : temps en ms entre chaque lettre tappée
 // 3ème param (optionnel) : temps en ms entre chaque changement de phrase
 // 4ème param (optionnel) : si tu veux utiliser un autre élément du dom (c'est à dire un noeud HTML sans l'id "animation-target", tu peux faire un document.getElement... et envoyer la valeur dans ce 4ème paramètre)
-initTextAnimation(["INTERACTIVE", "DIGITAL", "INTEMPERATE"], 100, 3000);
+initTextAnimation(["INTERACTIVE", "DIGITAL", "EVERLASTING"], 100, 3000);
 
