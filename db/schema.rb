@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_05_14_095559) do
+ActiveRecord::Schema.define(version: 2022_05_14_142059) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,11 +45,9 @@ ActiveRecord::Schema.define(version: 2022_05_14_095559) do
 
   create_table "boxes", force: :cascade do |t|
     t.bigint "user_id", null: false
-    t.bigint "receiver_id", null: false
     t.string "message"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["receiver_id"], name: "index_boxes_on_receiver_id"
     t.index ["user_id"], name: "index_boxes_on_user_id"
   end
 
@@ -77,6 +75,7 @@ ActiveRecord::Schema.define(version: 2022_05_14_095559) do
     t.integer "base_price"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "package_type"
   end
 
   create_table "receivers", force: :cascade do |t|
@@ -122,7 +121,6 @@ ActiveRecord::Schema.define(version: 2022_05_14_095559) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "boxes", "receivers"
   add_foreign_key "boxes", "users"
   add_foreign_key "location_packages", "locations"
   add_foreign_key "location_packages", "packages"
