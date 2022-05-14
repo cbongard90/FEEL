@@ -1,5 +1,49 @@
 <h1>app/views/packages/index.html.erb</h1>
 <p>Find me in app/views/packages/index.html.erb</p>
+<h2>All my packages</h2>
+
+<h3>Earth Packages</h3>
+<ul>
+<% @packages.each do |package|%>
+  <% if package.package_type == "earth" %>
+    <li>
+      <p>
+        <%= package.size %>
+        <%= package.base_price %>
+      </p>
+    </li>
+  <% end %>
+<% end %>
+</ul>
+
+<h3>Outer Space Packages</h3>
+<ul>
+<% @packages.each do |package|%>
+  <% if package.package_type == "outer space" %>
+    <li>
+      <p>
+        <%= package.size %>
+        <%= package.base_price %>
+      </p>
+    </li>
+  <% end %>
+<% end %>
+</ul>
+
+<h3>MetaVerse Packages</h3>
+<ul>
+<% @packages.each do |package|%>
+  <% if package.package_type == "metaverse" %>
+    <li>
+      <p>
+        <%= package.size %>
+        <%= package.base_price %>
+      </p>
+    </li>
+  <% end %>
+<% end %>
+</ul>
+
 
 <%= link_to "Home", root_path %>
 <%= link_to "Contact", contact_path %>
