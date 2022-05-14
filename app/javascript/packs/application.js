@@ -57,3 +57,35 @@ addEventListener("direct-upload:end", event => {
   const element = document.getElementById(`direct-upload-${id}`)
   element.classList.add("direct-upload--complete")
 })
+
+
+
+
+
+function initTextAnimation(sentences, typingInterval = 100, sentenceInterval = 2000, customTarget = null) {
+      const target = customTarget !== null ? customTarget : document.querySelector("#animation-target");
+      let sentenceIndex = 1;
+
+      setInterval(() => {
+        const sentence = sentences[sentenceIndex];
+        target.textContent = "";
+
+        for (let i = 0; i < sentence.length; i++) {
+          setTimeout(() => {
+            target.textContent += sentence[i]
+          }, i * typingInterval, i);
+        };
+
+        sentenceIndex++;
+
+        if (sentenceIndex === sentences.length) {
+          sentenceIndex = 0;
+        };
+      }, sentenceInterval, sentenceIndex);
+    };
+// 1er param : un tableau avec les phrases à animer
+// 2ème param (optionnel) : temps en ms entre chaque lettre tappée
+// 3ème param (optionnel) : temps en ms entre chaque changement de phrase
+// 4ème param (optionnel) : si tu veux utiliser un autre élément du dom (c'est à dire un noeud HTML sans l'id "animation-target", tu peux faire un document.getElement... et envoyer la valeur dans ce 4ème paramètre)
+initTextAnimation(["INTERACTIVE", "DIGITAL", "INTEMPERATE"], 100, 3000);
+
