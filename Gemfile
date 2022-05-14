@@ -39,6 +39,8 @@ gem 'cloudinary'
 gem 'rails_admin'
 gem 'twilio-ruby'
 gem 'geocoder'
+gem 'invisible_captcha'
+
 
 
 gem 'autoprefixer-rails', '10.2.5'
