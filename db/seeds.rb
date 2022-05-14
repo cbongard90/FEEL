@@ -16,14 +16,11 @@ User.destroy_all
 # Seeds Users
 
 puts "Creating 1 admin"
-user1 = User.new(email: "test@test.com", password: "password", first_name:"Test", surname:"Test)
-file1 = URI.open('https://kitt.lewagon.com/placeholder/users/random')
-user1.photo.attach(io: file1, filename: "user1" , content_type: 'image/jpg')
+user1 = User.new(email: "test@test.com", password: "password", name:"Test", surname:"Test")
 user1.save
-puts "Creating 1 admin"
-admin1 = User.new(email: "admin@test.com", password: "password", first_name:"Test", surname:"Test, admin: true)
-file1 = URI.open('https://kitt.lewagon.com/placeholder/users/random')
-admin1.photo.attach(io: file1, filename: "admin1" , content_type: 'image/jpg')
+
+puts "Creating 1 standard user"
+admin1 = User.new(email: "admin@test.com", password: "password", name:"Test", surname:"Test", admin: true)
 admin1.save
 
 # Seeds Packages
@@ -32,127 +29,177 @@ puts "Creating packages..."
 Package.create!(
   size: "small",
   package_type: "earth",
-  base_price: 1
+  base_price: 500
 )
 
 Package.create!(
   size: "medium",
   package_type: "earth",
-  base_price: 2
+  base_price: 1500
 )
 
 Package.create!(
   size: "large",
   package_type: "earth",
-  base_price: 3
+  base_price: 2500
 )
 
 Package.create!(
   size: "small",
   package_type: "outer space",
-  base_price: 50
+  base_price: 250
 )
 
 Package.create!(
   size: "medium",
   package_type: "outer space",
-  base_price: 200
+  base_price: 500
 )
 
 Package.create!(
   size: "large",
   package_type: "outer space",
-  base_price: 3000
+  base_price: 1000
 )
 
 Package.create!(
   size: "small",
   package_type: "metaverse",
-  base_price: 10_000
+  base_price: 150_000
 )
 
 Package.create!(
   size: "medium",
   package_type: "metaverse",
-  base_price: 20_000
+  base_price: 300_000
 )
 
 Package.create!(
   size: "large",
   package_type: "metaverse",
-  base_price: 30_000
+  base_price: 600_000
 )
 
-puts "Creating locations..."
+# Seed Locations Earth
+
+puts "Searching for unique places..."
+
 Location.create!(
   name: "Point Nemo",
   environment: "earth",
-  latitude: 0,
-  longitude: 0
+  latitude: -48.876667,
+  longitude: -123.393333,
+  picture_path: "Point_Nemo.jpg"
 )
+
+
 
 Location.create!(
   name: "Mount Everest",
   environment: "earth",
-  latitude: 27.9881,
-  longitude: 86.9253
+  latitude: 86.9253,
+  longitude: 27.9881,
+  picture_path: "Mount_Everest.jpg"
 )
 
 Location.create!(
   name: "Mount Kilimanjaro",
   environment: "earth",
-  latitude: -3.038,
-  longitude: 37.906
+  latitude: -3.067425,
+  longitude: 37.355627 ,
+  picture_path: "Mount_Kilimanjaro.jpg"
 )
 
 Location.create!(
-  name: "Paris",
+  name: "Null Island",
   environment: "earth",
-  latitude: 48.8566,
-  longitude: 2.3522
+  latitude: 0,
+  longitude: 0,
+  picture_path: "Null_Island.jpg"
 )
 
 Location.create!(
-  name: "New York",
+  name: "Eiffel Tower",
   environment: "earth",
-  latitude: 40.7128,
-  longitude: 74.0060
+  latitude: 48.858370,
+  longitude: 2.294481,
+  picture_path: "Eiffel_Tower.jpg"
+)
+
+Location.create!(
+  name: "Empire State Building",
+  environment: "earth",
+  latitude: 40.748441,
+  longitude: -73.985664,
+  picture_path: "Empire_State_Building.jpg"
 )
 
 Location.create!(
   name: "Challenger Deep",
   environment: "earth",
-  latitude: -24.6334,
-  longitude: 133.865
+  latitude: 11.373333,
+  longitude: 142.591667,
+  picture_path: "Challenger_Deep.jpg"
 )
 
 Location.create!(
-  name: "Antarctica",
+  name: "Svalbard Global Seed Vault",
   environment: "earth",
-  latitude: -90,
-  longitude: 0
+  latitude: 78.235677,
+  longitude: 15.491325,
+  picture_path: "Svalbard_Global_Seed_Vault.jpg"
 )
 
-puts "Locations on Earth created!"
+# Seed Locations Space
+
+
 Location.create!(
-  name: "Mars",
+  name: "Milky Way",
   environment: "outer space",
-  picture_path: "mars.jpg"
+  picture_path: "Milky_Way.jpg"
 )
 
+puts "Locations on Outer Space booked!"
+
 Location.create!(
-  name: "Venus",
+  name: "Andromeda Galaxy",
   environment: "outer space",
-  picture_path: "venus.jpg"
+  picture_path: "Andromeda_Galaxy.jpg"
 )
 
-puts "Locations in Outer Space created!"
-
+puts "Locations on Outer Space booked!"
 
 Location.create!(
-  name: "Venus",
+  name: "Moon",
+  environment: "outer space",
+  picture_path: "Moon.jpg"
+)
+
+puts "Locations on Outer Space booked!"
+
+
+# Seed Locations Metaverse
+
+Location.create!(
+  name: "Facebook Metaverse",
   environment: "metaverse",
-  picture_path: "metaverse_big.jpg"
+  picture_path: "Facebook_Metaverse.jpg"
 )
 
-puts "Metaverse location created!"
+puts " Facebook Metaverse location saved!"
+
+Location.create!(
+  name: "Microsoft Metaverse",
+  environment: "metaverse",
+  picture_path: "Microsoft_Metaverse.jpg"
+)
+
+puts " Microsoft Metaverse location saved!"
+
+Location.create!(
+  name: "Crypto Metaverse",
+  environment: "metaverse",
+  picture_path: "Crypto_Metaverse.jpg"
+)
+
+puts "Crypto location saved!"
