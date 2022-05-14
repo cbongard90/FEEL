@@ -8,21 +8,51 @@
 			</h1>
 		</div>
       <button type="button" class="btn btn-primary">
-      Learn More
+        Learn More
       </button>
 	</div>
 </div>
 
-<div class="spinning-earth">
-  <div class="earth"></div>
-  <div class="moon-hitbox">
-    <div class="moon"></div>
-    <div class="moon moon-back"></div>
+<div class="container-services">
+  <div class="flex-item-left" style="flex-grow: 1">
+   Texte 1
+  </div>
+  <div class="spinning-earth flex-item-center" style="flex-grow: 8">
+    <div class="earth"></div>
+    <div class="moon-hitbox">
+      <div class="moon"></div>
+      <div class="moon moon-back"></div>
+    </div>
+  </div>
+  <div class="flex-item-right" style="flex-grow: 1">
+   Texte 2
   </div>
 </div>
 
-<%= link_to 'Start your legacy', new_box_path, class: "btn btn-primary btn-block" %>
+<%= link_to 'Start Your Legacy', new_box_path, class: "btn btn-primary btn-block" %>
 
-<%= link_to "Home", root_path %>
-<%= link_to "Contact", contact_path %>
-<%= link_to "About", about_path %>
+<div>
+  <h2>
+    How to start building your legacy with Feel Beyond?
+  </h2>
+
+  <p>
+    None of us knows when our last day will be, but like a will or testament or legacy, you can create your own Time Capsule today, easily, safely and securely.
+    It will be delivered to family and friends, or to the next generation when you are gone, creating digital memories forever.
+  </p>
+</div>
+
+<div class="cards">
+
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= image_path 'photography-bed.jpg' %>)">
+    <%= link_to 'What is a digital legacy?', new_box_path %>
+  </div>
+
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= image_path 'family-photography.jpg' %>)">
+    <%= link_to 'A message to Future Generations', new_box_path %>
+  </div>
+
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= image_path 'wedding-photography.jpg' %>)">
+    <%= link_to 'Preserving your life story', new_box_path %>
+  </div>
+</div>

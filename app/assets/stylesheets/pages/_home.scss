@@ -7,33 +7,123 @@ $moonSpinDur: $earthSpinDur * 27;
 
 
 // Animation Text
-        #container-animation {
-    		  margin: 0;
-    		  padding: 0;
-    		  font-family: Arial;
-    		}
+#container-animation {
+  margin: 0;
+  padding: 0;
+  font-family: Arial;
+}
 
-    		#container {
-    		  width: 100%;
-    		  height: 100vh;
-    		  background-color: black;
-    		  display: flex;
-    		  justify-content: center;
-    		  align-items: center;
-    		}
+#container {
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-    		h1 {
-    		  text-align: left;
-    		  color: white;
-    		  font-size: 70px;
-    		  line-height: 90px;
-    		}
+h1 {
+  text-align: left;
+  color: white;
+  font-size: 70px;
+  line-height: 90px;
+}
 
-    		span {
-    		  color: $purple ;
-    		}
+span {
+  color: $purple ;
+}
 
+// Container services
+.container-services {
+  width: 100%;
+  height: 100vh;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: black;
+  color: white;
+}
 
+.flex-item-left {
+  flex: 20%;
+  background-color: pink;
+}
+
+.flex-item-center {
+  flex: 60%;
+}
+.flex-item-right {
+  flex: 20%;
+  background-color: blue;
+}
+
+/* Responsive layout - makes a one column layout instead of a two-column layout */
+@media (max-width: 800px) {
+
+  .flex-item-right,
+  .flex-item-left {
+    flex: 100%;
+  }
+}
+
+// Blog section
+
+.card-category {
+  background-size: cover;
+  background-position: center;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  margin: 5%;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+}
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
 
 // Colors
 $lb: rgb(194,228,250);
