@@ -1,6 +1,8 @@
 .banner {
     background: linear-gradient(-45deg,#5Ae3ed,#9263E3);
     height: 90vh;
+    width: 98%;
+    border-radius: 15px;
     h1 {
         @include main-header-style
     }
