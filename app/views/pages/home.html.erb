@@ -1,6 +1,16 @@
 <h1>Pages#Home</h1>
 <p>Find me in app/views/pages/home.html.erb</p>
 
+<div class="spinning-earth">
+  <div class="earth"></div>
+  <div class="moon-hitbox">
+    <div class="moon"></div>
+    <div class="moon moon-back"></div>
+  </div>
+</div>
+
+<%= link_to 'Start your legacy', new_box_path, class: "btn btn-primary btn-block" %>
+
 <%= link_to "Home", root_path %>
 <%= link_to "Contact", contact_path %>
 <%= link_to "About", about_path %>
