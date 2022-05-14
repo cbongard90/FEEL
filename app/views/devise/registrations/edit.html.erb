@@ -82,7 +82,10 @@
 <label class="btn btn-primary">
   Add a Profile Picture
   <span style="display:none;">
-    <%= f.file_field :avatar, required: true, name: 'avatar' %>
+       <%= f.file_field :avatar,
+        placeholder: 'Upload picture',
+        direct_upload: true
+        %>
   </span>
 </label>
 
