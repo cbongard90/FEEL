@@ -1,8 +1,8 @@
 // Specific CSS for your home-page
 // Timing
 $earthSpinDur: 15s;
-$moonOrbitDur: $earthSpinDur * 1.322;
-$moonSpinDur: $earthSpinDur * 1;
+$moonOrbitDur: $earthSpinDur * 27.322;
+$moonSpinDur: $earthSpinDur * 27;
 // info: https://www.space.com/24871-does-the-moon-rotate.html
 
 // Colors
@@ -87,7 +87,7 @@ $bkT: rgba(0,0,0,0);
 		background-image: url(https://i.ibb.co/0DJQB6Y/moon-texture.jpg);
 	}
 	&-hitbox {
-		animation: moonOrbitZ $moonOrbitDur (-$moonOrbitDur/4) ease-in-out infinite;
+		animation: moonOrbitZ ($moonOrbitDur) (-$moonOrbitDur/4) ease-in-out infinite;
 		position: absolute;
 		top: calc(50% - 2em);
 		left: calc(50% - 2em);
@@ -103,7 +103,6 @@ $bkT: rgba(0,0,0,0);
 @keyframes moonOrbitX {
 	from { transform: translateZ(0) translateX(-15em) }
 	50% { transform: translateZ(0) translateX(15em) }
-	50.01% { transform: translateZ(-1px) translateX(15em) }
 	to { transform: translateZ(-1px) translateX(-15em) }
 }
 @keyframes moonOrbitZ {
