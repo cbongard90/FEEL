@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_05_14_143058) do
+ActiveRecord::Schema.define(version: 2022_05_14_212328) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -63,13 +63,13 @@ ActiveRecord::Schema.define(version: 2022_05_14_143058) do
   end
 
   create_table "locations", force: :cascade do |t|
-    t.bigint "box_id", null: false
-    t.string "type"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.float "latitude"
     t.float "longitude"
-    t.index ["box_id"], name: "index_locations_on_box_id"
+    t.string "name"
+    t.string "environment"
+    t.string "picture_path"
   end
 
   create_table "packages", force: :cascade do |t|
@@ -126,6 +126,5 @@ ActiveRecord::Schema.define(version: 2022_05_14_143058) do
   add_foreign_key "boxes", "users"
   add_foreign_key "location_packages", "locations"
   add_foreign_key "location_packages", "packages"
-  add_foreign_key "locations", "boxes"
   add_foreign_key "timesheets", "packages"
 end
