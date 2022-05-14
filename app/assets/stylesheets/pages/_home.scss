@@ -2,36 +2,43 @@
 // Timing
 $earthSpinDur: 15s;
 $moonOrbitDur: $earthSpinDur * 27.322;
+$moonOrbitDurFast: $earthSpinDur * 1.322;
 $moonSpinDur: $earthSpinDur * 27;
+$moonSpinDurFast: $earthSpinDur * 1;
 // info: https://www.space.com/24871-does-the-moon-rotate.html
 
 
 // Animation Text
-        #container-animation {
-    		  margin: 0;
-    		  padding: 0;
-    		  font-family: Arial;
-    		}
+#container-animation {
+  margin: 0;
+  padding: 0;
+  font-family: Arial;
 
-    		#container {
-    		  width: 100%;
-    		  height: 100vh;
-    		  background-color: black;
-    		  display: flex;
-    		  justify-content: center;
-    		  align-items: center;
-    		}
 
-    		h1 {
-    		  text-align: left;
-    		  color: white;
-    		  font-size: 70px;
-    		  line-height: 90px;
-    		}
+  #container {
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-    		span {
-    		  color: $purple ;
-    		}
+  h1 {
+    text-align: left;
+    color: white;
+    font-size: 70px;
+    line-height: 90px;
+    @media screen and (max-width: 768px) {
+      font-size: 40px;
+      line-height: 60px;
+    }
+  }
+
+  span {
+    color: $purple ;
+  }
+}
 
 
 
@@ -100,7 +107,7 @@ $bkT: rgba(0,0,0,0);
 	}
 	&:after {
 		animation: textureSpin $earthSpinDur linear infinite;
-		background-image: url(https://i.ibb.co/tK45vHK/earth-texture.jpg);
+		background-image: asset-url("earth-texture.jpg");
 	}
 }
 .moon {
@@ -108,13 +115,19 @@ $bkT: rgba(0,0,0,0);
 	width: 4em;
 	height: 4em;
 	transform: translateZ(0) translateX(-15em);
+  @media screen and (max-width: 768px) {
+    animation: moonOrbitX $moonOrbitDurFast ease-in-out infinite;
+    }
 	&:before {
 		background-image: radial-gradient(100% 125% at 40% 50%, $bkT 40%, $bk 50%);
 		box-shadow: 0 0 0.5em inset;
 	}
 	&:after {
 		animation: textureSpin $moonSpinDur linear infinite reverse;
-		background-image: url(https://i.ibb.co/0DJQB6Y/moon-texture.jpg);
+		background-image: asset-url("moon-texture.jpg");;
+    @media screen and (max-width: 768px) {
+      animation: textureSpin $moonSpinDurFast linear infinite reverse;
+    }
 	}
 	&-hitbox {
 		animation: moonOrbitZ ($moonOrbitDur) (-$moonOrbitDur/4) ease-in-out infinite;
@@ -122,6 +135,10 @@ $bkT: rgba(0,0,0,0);
 		top: calc(50% - 2em);
 		left: calc(50% - 2em);
 		transform: translateZ(0);
+
+    @media screen and (max-width: 768px) {
+      animation: moonOrbitZ ($moonOrbitDurFast) (-$moonOrbitDurFast/4) ease-in-out infinite;
+    }
 	}
 }
 
