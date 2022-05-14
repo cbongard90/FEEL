@@ -2,33 +2,34 @@
     background: $light-gray;
     display: flex;
     align-items: center;
-    margin-top: 245px;
     justify-content: space-between;
     font-size: 1rem;
     height: 100px;
     color: rgba(0,0,0,0.3);
-    position: sticky;
+    position: absolute;
+    bottom: 0;
     margin-bottom: 0%;
     padding: 0 50px;
     width: 100%;
     box-shadow: 0 0 15px rgba(0,0,0,0.1);
-}
-  
-.footer-links {
-display: flex;
-align-items: center;
-}
-  
-.footer-links a {
-color: $black;
-opacity: 0.15;
-text-decoration: none;
-font-size: 24px;
-padding: 0px 10px;
-transition: all 0.3s ease;
-}
-.footer-links a:hover {
-opacity: 1;
-color: $primaryColor;
-transform: scale(1.25);
+
+    .footer-links {
+        display: flex;
+        align-items: center;
+
+        a {
+            color: $black;
+            opacity: 0.15;
+            text-decoration: none;
+            font-size: 24px;
+            padding: 0px 10px;
+            transition: all 0.3s ease;
+
+            &:hover {
+                opacity: 1;
+                color: $primaryColor;
+                transform: scale(1.25);
+            }
+        }
+    }
 }
