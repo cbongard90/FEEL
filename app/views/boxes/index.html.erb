@@ -1,0 +1,7 @@
+<%= link_to 'Start your legacy', new_box_path, class: "btn btn-primary btn-block" %>
+
+
+<h1>Box List</h1>
+<% @boxes.each do |box| %>
+  <%= link_to box.message, box %>
+<% end %>

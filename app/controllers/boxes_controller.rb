@@ -11,9 +11,18 @@ class BoxesController < ApplicationController
 
   def new
     @box = Box.new
+    @receiver = Receiver.new
   end
 
   def create
+    @box = Box.new(box_params)
+    @box.user_id = current_user.id
+
+    if @box.save
+      redirect_to @box
+    else
+      render 'new'
+    end
   end
 
   def update
@@ -26,6 +35,6 @@ class BoxesController < ApplicationController
   end
 
   def box_params
-    params.require(:box).permit(:name, :description, :user_id, :receiver_id)
+    params.require(:box).permit(:message, :user_id)
   end
 end
