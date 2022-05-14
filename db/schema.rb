@@ -10,10 +10,66 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_05_14_075802) do
+ActiveRecord::Schema.define(version: 2022_05_14_091008) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "boxes", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "receiver_id", null: false
+    t.string "message"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["receiver_id"], name: "index_boxes_on_receiver_id"
+    t.index ["user_id"], name: "index_boxes_on_user_id"
+  end
+
+  create_table "location_packages", force: :cascade do |t|
+    t.bigint "location_id", null: false
+    t.bigint "package_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["location_id"], name: "index_location_packages_on_location_id"
+    t.index ["package_id"], name: "index_location_packages_on_package_id"
+  end
+
+  create_table "locations", force: :cascade do |t|
+    t.bigint "box_id", null: false
+    t.string "type"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.float "latitude"
+    t.float "longitude"
+    t.index ["box_id"], name: "index_locations_on_box_id"
+  end
+
+  create_table "packages", force: :cascade do |t|
+    t.string "size"
+    t.integer "base_price"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "receivers", force: :cascade do |t|
+    t.boolean "is_private"
+    t.string "name"
+    t.string "address"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "timesheets", force: :cascade do |t|
+    t.string "start_time"
+    t.string "end_time"
+    t.bigint "package_id", null: false
+    t.integer "monthly_price"
+    t.integer "yearly_price"
+    t.integer "total_price"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["package_id"], name: "index_timesheets_on_package_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -28,4 +84,10 @@ ActiveRecord::Schema.define(version: 2022_05_14_075802) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "boxes", "receivers"
+  add_foreign_key "boxes", "users"
+  add_foreign_key "location_packages", "locations"
+  add_foreign_key "location_packages", "packages"
+  add_foreign_key "locations", "boxes"
+  add_foreign_key "timesheets", "packages"
 end
