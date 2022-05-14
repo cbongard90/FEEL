@@ -29,18 +29,47 @@ $moonSpinDurFast: $earthSpinDur * 1;
 		display: flex;
 		justify-content: center;
 		align-items: center;
-	  }
+
+		.main-header-content {
+			h1 {
+			  text-align: left;
+			  color: $white;
+			  font-size: 90px;
+			  line-height: 90px;
+			  @media screen and (max-width: 768px) {
+				font-size: 40px;
+				line-height: 60px;
+			  }
+			}
+			
+			.main-btn-container {
+
+				.header-cta {
+					font-size: 1.5rem;
+					color: $white;
+					position: relative;
+					transition: all 0.3s ease;
 	
-	  h1 {
-		text-align: left;
-		color: $white;
-		font-size: 90px;
-		line-height: 90px;
-		@media screen and (max-width: 768px) {
-		  font-size: 40px;
-		  line-height: 60px;
+					&:hover {
+						margin-left: 2%;
+					}
+				}
+
+				.header-cta-arrow {
+					opacity: 0;
+					font-size: 1.5rem;
+					color: $white;
+					margin-left: -20px;
+					transition: all 0.3s ease;
+				}
+
+				&:hover .header-cta-arrow {
+					opacity: 1;
+				}
+			}
 		}
 	  }
+	
 	
 	  span {
 		color: $purple ;

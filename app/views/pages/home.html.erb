@@ -1,29 +1,33 @@
 <div class="flex-container home-container">
-  <div id="container-animation">
-		<div id="container">
-			<h1>
-				CREATE YOUR<br/>
-				<span id="animation-target">TIME CAPSULE</span><br/>
-				LEGACY
-			</h1>
-		</div>
-	</div>
+    <div id="container-animation">
+        <div id="container">
+            <div class="main-header-content">
+                <h1>
+                  CREATE YOUR<br/>
+                  <span id="animation-target">TIME CAPSULE</span><br/>
+                  LEGACY
+                </h1>
+
+                <div class="main-btn-container my-4">
+                    <%= link_to 'Get Started', new_box_path, class: "btn header-cta" %>
+                    <%= link_to new_box_path, class:'btn header-cta-arrow' do %>
+                        <i class="fa-solid fa-chevron-right"></i>
+                    <% end %>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <div class="container-services">
-  <div class="spinning-earth flex-item-center" style="flex-grow: 8">
-    <div class="earth"></div>
-    <div class="moon-hitbox">
-      <div class="moon"></div>
-      <div class="moon moon-back"></div>
+    <div class="spinning-earth flex-item-center" style="flex-grow: 8">
+      <div class="earth"></div>
+          <div class="moon-hitbox">
+              <div class="moon"></div>
+              <div class="moon moon-back"></div>
+          </div>
     </div>
-  </div>
-  <div class="flex-item-right" style="flex-grow: 1">
-   Texte 2
-  </div>
 </div>
-
-<%= link_to 'Start Your Legacy', new_box_path, class: "btn btn-primary btn-block" %>
 
 <div>
   <h2>
