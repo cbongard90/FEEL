@@ -1,0 +1,22 @@
+<h2 class="text-center">Decide where to share</h2>
+<div class="container">
+  <div class="cards">
+    <%= link_to new_location_path(:type => "earth"), class:'text-decoration-none' do %>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= image_path 'earth.jpg' %>)">
+        Earth
+      </div>
+    <% end %>
+
+    <%= link_to new_location_path(:type => "outer space"), class:'text-decoration-none' do %>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= image_path 'outerspace.jpg' %>)">
+        Outer Space
+      </div>
+    <% end %>
+
+    <%= link_to new_location_path(:type => "metaverse"), class:'text-decoration-none' do %>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= image_path 'metaverse.jpg' %>)">
+        MetaVerse
+      </div>
+    <% end %>
+  </div>
+</div>

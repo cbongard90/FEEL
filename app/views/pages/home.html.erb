@@ -1,5 +1,17 @@
-<h1>Pages#Home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="flex-container">
+  <div id="container-animation">
+		<div id="container">
+			<h1>
+				CREATE YOUR<br/>
+				<span id="animation-target">TIME CAPSULE</span><br/>
+				LEGACY
+			</h1>
+		</div>
+      <button type="button" class="btn btn-primary">
+      Learn More
+      </button>
+	</div>
+</div>
 
 <div class="spinning-earth">
   <div class="earth"></div>
@@ -9,7 +21,10 @@
   </div>
 </div>
 
-<%= link_to 'Start your legacy', new_box_path, class: "btn btn-primary btn-block" %>
+<%= link_to 'Start your legacy', begin_path, class: "btn btn-primary btn-block" %>
+
+
+
 
 <%= link_to "Home", root_path %>
 <%= link_to "Contact", contact_path %>
