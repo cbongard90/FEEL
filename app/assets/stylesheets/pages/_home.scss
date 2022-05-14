@@ -6,6 +6,7 @@ $moonOrbitDurFast: $earthSpinDur * 1.322;
 $moonSpinDur: $earthSpinDur * 27;
 $moonSpinDurFast: $earthSpinDur * 1;
 // info: https://www.space.com/24871-does-the-moon-rotate.html
+//body {background-color: black;}
 
 // Animation Text
 #container-animation {
@@ -25,8 +26,8 @@ $moonSpinDurFast: $earthSpinDur * 1;
   h1 {
     text-align: left;
     color: white;
-    font-size: 70px;
-    line-height: 90px;
+    font-size: 100px;
+    line-height: 120px;
     @media screen and (max-width: 768px) {
       font-size: 40px;
       line-height: 60px;
