@@ -1,12 +1,13 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: transparent;
   position: sticky;
-  width: 100%;
-  //border-bottom: 5px solid $misty-blue;
-  height: 80px;
   top: 0;
-  z-index: 999;
+  z-index: 5;
+
+  .avatar-bordered {
+    width: 40px;
+  }
+
 }
 
 .navbar-lewagon .navbar-collapse {

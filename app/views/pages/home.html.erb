@@ -1,3 +1,54 @@
+
+<div class="flex-container home-container">
+    <div id="container-animation">
+        <div id="container">
+            <div class="main-header-content">
+                <h1>
+                  CREATE YOUR<br/>
+                  <span id="animation-target">TIME CAPSULE</span><br/>
+                  LEGACY
+                </h1>
+
+                <div class="main-btn-container my-4">
+                    <%= link_to 'Get Started', new_box_path, class: "btn header-cta" %>
+                    <%= link_to new_box_path, class:'btn header-cta-arrow' do %>
+                        <i class="fa-solid fa-chevron-right"></i>
+                    <% end %>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-services">
+    <div class="spinning-earth flex-item-center" style="flex-grow: 8">
+      <div class="earth"></div>
+          <div class="moon-hitbox">
+              <div class="moon"></div>
+              <div class="moon moon-back"></div>
+          </div>
+    </div>
+</div>
+
+<div class="container home-feel py-4">
+    <section class="home-vision">
+        <h2 class="content mb-4">What is FEEL ?</h2>
+        <div class="row">
+            <div class="col-md-12 d-flex">
+                <img />
+                <div>
+                    <h2>
+                      How to start building your legacy with Feel ?
+                    </h2>
+                    <p>
+                      None of us knows when our last day will be, but like a will or testament or legacy, you can create your own Time Capsule today, easily, safely and securely.
+                      It will be delivered to family and friends, or to the next generation when you are gone, creating digital memories forever.
+                    </p>
+              </div>
+            </div>
+        </div>
+    </section>
+=======
 <div class="flex-container">
   <div id="container-animation">
 		<div id="container">
@@ -38,23 +89,19 @@
     How to start building your legacy with Feel Beyond?
   </h2>
 
-  <p>
-    None of us knows when our last day will be, but like a will or testament or legacy, you can create your own Time Capsule today, easily, safely and securely.
-    It will be delivered to family and friends, or to the next generation when you are gone, creating digital memories forever.
-  </p>
-</div>
 
-<div class="cards">
+  <div class="cards">
 
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= image_path 'photography-bed.jpg' %>)">
-    <%= link_to 'What is a digital legacy?', new_box_path %>
-  </div>
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= image_path 'photography-bed.jpg' %>)">
+      <%= link_to 'What is a digital legacy?', new_box_path %>
+    </div>
 
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= image_path 'family-photography.jpg' %>)">
-    <%= link_to 'A message to Future Generations', new_box_path %>
-  </div>
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= image_path 'family-photography.jpg' %>)">
+      <%= link_to 'A message to Future Generations', new_box_path %>
+    </div>
 
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= image_path 'wedding-photography.jpg' %>)">
-    <%= link_to 'Preserving your life story', new_box_path %>
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= image_path 'wedding-photography.jpg' %>)">
+      <%= link_to 'Preserving your life story', new_box_path %>
+    </div>
   </div>
 </div>
