@@ -1,58 +1,79 @@
-<h1>Select your location</h1>
-<% if (params[:type] == 'earth') %>
-  <p>Welcome to Earth</p>
+<div class="container">
+  <h1>Select your location</h1>
+</div>
+  <% if (params[:type] == 'earth') %>
+    <p class="text-align-center">Welcome to Earth</p>
 
-    <div id="map" class="mx-auto"
-          data-controller="mapbox"
-          data-mapbox-markers-value="<%= @markers.to_json %>"
-          data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">>
-    </div>
+      <div id="map" class="mx-auto"
+            data-controller="mapbox"
+            data-mapbox-markers-value="<%= @markers.to_json %>"
+            data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">>
+      </div>
 
 
 
 
 
-<% elsif (params[:type] == 'outer space') %>
-  <p>Welcome to Outer Space</p>
-  <div class="container">
-    <div class="cards">
-      <% @space_locations.each do |location| %>
-        <%= link_to new_box_path(:location => location), class:'text-decoration-none' do %>
-          <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= image_path location.picture_path %>)">
-            <%= location.name %>
-          </div>
+  <% elsif (params[:type] == 'outer space') %>
+    <p>Welcome to Outer Space</p>
+    <div class="container">
+      <div class="cards">
+        <% @space_locations.each do |location| %>
+          <%= link_to new_box_path(:location => location), class:'text-decoration-none' do %>
+            <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= image_path location.picture_path %>)">
+              <%= location.name %>
+            </div>
+          <% end %>
         <% end %>
-      <% end %>
+      </div>
     </div>
-  </div>
-<% else %>
-  <p>Welcome to MetaVerse</p>
-  <div class="container">
-    <div class="cards">
-      <% @metaverse_locations.each do |location| %>
-        <%= link_to new_box_path(:location => location), class:'text-decoration-none' do %>
-          <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= image_path location.picture_path %>)">
-            <%= location.name %>
-          </div>
+  <% else %>
+    <p>Welcome to MetaVerse</p>
+    <div class="container">
+      <div class="cards">
+        <% @metaverse_locations.each do |location| %>
+          <%= link_to new_box_path(:location => location), class:'text-decoration-none' do %>
+            <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= image_path location.picture_path %>)">
+              <%= location.name %>
+            </div>
+          <% end %>
         <% end %>
-      <% end %>
+      </div>
+    </div>
+  <% end %>
+
+    <div class="container text-align-left">
+      <%= link_to 'Go Back', begin_path, class:"btn secondary-cta-w" %>
     </div>
   </div>
-<% end %>
-  <%= link_to 'Go Back', begin_path, class:"btn secondary-cta-w" %>
 
-  <div>
-<h2>Our Pricings</h2>
-  <ul>
-  <% @packages.each do |package|%>
-      <% if package.package_type == params[:type] %>
-        <li>
-          <p>
-            <%= package.size %>
-            <%= package.base_price %>
-          </p>
-        </li>
-      <% end %>
-    <% end %>
-  </ul>
-  </div>
+  <div class="container">
+      <div id="intro">
+        <h2 class="mb-2">Pricing plan</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti saepe commodi recusandae perferendis consequatur
+          possimus maxime illum deleniti atque quaerat?</p>
+      </div>
+
+      <div class="cards-container">
+      <% @packages.each do |package|%>
+          <% if package.package_type == params[:type] %>
+            <div class="card">
+              <div class="card-titles mb-2">
+                <h2>Basic</h2>
+                <p class="price">$<%= package.base_price %></p>
+                <h3>Limited access</h3>
+              </div>
+
+              <div class="access-list">
+                <p><i class="fas fa-check"></i> Lorem, ipsum dolor</p>
+                <p><i class="fas fa-check"></i> Lorem, ipsum dolor</p>
+                <p><i class="fas fa-check"></i> Lorem, ipsum dolor</p>
+                <p><i class="fas fa-check"></i> Lorem, ipsum</p>
+                <p><i class="fas fa-times"></i> Lorem, ipsum dolor</p>
+              </div>
+            </div>
+          <% end %>
+        <% end %>
+
+      </div>
+    </div>
