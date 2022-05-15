@@ -1,4 +1,6 @@
 class LocationsController < ApplicationController
+  skip_before_action :authenticate_user! , only: [ :new]
+
   def new
     @location = Location.new
     @locations = Location.all

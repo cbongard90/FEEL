@@ -1,6 +1,15 @@
 <h2><%= location.name %></h2>
 <%= image_tag(location.picture_path) %>
-<p><%= location.latitude %></p>
-<p><%= location.longitude %></p>
+<div class="d-flex justify-content-between mx-4">
+  <div class="d-flex flex-column">
+    <p>Latitude</p>
+    <p><%= location.latitude.abs.round(3) %><%= location.latitude > 0 ? " N": " S" %></p>
+  </div>
+  <div class="d-flex flex-column">
+    <p>Longitude</p>
+    <p><%= location.longitude.abs.round(3) %><%= location.longitude > 0 ? " E": " W" %></p>
+  </div>
+
+</div>
 
 <%= link_to "Drop Capsule Here", new_box_path(:location => location), class:"btn secondary-cta-w"%>

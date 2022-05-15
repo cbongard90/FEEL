@@ -12,69 +12,70 @@ puts "Clearing database..."
 Package.destroy_all
 Location.destroy_all
 User.destroy_all
+Box.destroy_all
 
 # Seeds Users
 puts "Creating 1 standard user"
-user1 = User.new(email: "test@test.com", password: "password", name:"Test", surname:"Test")
+user1 = User.new(email: "test@test.com", password: "password", name: "Test", surname: "Test")
 user1.save
 
 puts "Creating 1 admin"
-admin1 = User.new(email: "admin@test.com", password: "password", name:"Test", surname:"Test", admin: true)
+admin1 = User.new(email: "admin@test.com", password: "password", name: "Test", surname:"Test", admin: true)
 admin1.save
 
 # Seeds Packages
 
 puts "Creating packages..."
 Package.create!(
-  size: "small",
+  size: "Basic",
   package_type: "earth",
   base_price: 500
 )
 
 Package.create!(
-  size: "medium",
+  size: "Standard",
   package_type: "earth",
   base_price: 1500
 )
 
 Package.create!(
-  size: "large",
+  size: "Premium",
   package_type: "earth",
   base_price: 2500
 )
 
 Package.create!(
-  size: "small",
+  size: "Basic",
   package_type: "outer space",
   base_price: 250
 )
 
 Package.create!(
-  size: "medium",
+  size: "Standard",
   package_type: "outer space",
   base_price: 500
 )
 
 Package.create!(
-  size: "large",
+  size: "Premium",
   package_type: "outer space",
   base_price: 1000
 )
 
 Package.create!(
-  size: "small",
+  size: "Basic",
   package_type: "metaverse",
   base_price: 150_000
 )
 
 Package.create!(
-  size: "medium",
+  size: "Standard",
   package_type: "metaverse",
   base_price: 300_000
 )
 
 Package.create!(
-  size: "large",
+  size: "Premium",
   package_type: "metaverse",
   base_price: 600_000
 )
@@ -90,8 +91,6 @@ Location.create!(
   longitude: -123.393333,
   picture_path: "Point_Nemo.jpg"
 )
-
-
 
 Location.create!(
   name: "Mount Everest",
