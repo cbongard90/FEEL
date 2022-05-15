@@ -14,21 +14,31 @@
 <% elsif (params[:type] == 'outer space') %>
   <p>Welcome to Outer Space</p>
   <div class="container">
-  <div class="cards">
-    <% @space_locations.each do |location| %>
-      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= image_path location.picture_path %>)">
-        <%= location.name %>
-      </div>
-    <% end %>
+    <div class="cards">
+      <% @space_locations.each do |location| %>
+        <%= link_to new_box_path(:location => location), class:'text-decoration-none' do %>
+          <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= image_path location.picture_path %>)">
+            <%= location.name %>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
   </div>
-</div>
 <% else %>
-<p>Welcome to MetaVerse</p>
-      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= image_path @metaverse.picture_path %>)">
-        <%= @metaverse.name %>
-      </div>
+  <p>Welcome to MetaVerse</p>
+  <div class="container">
+    <div class="cards">
+      <% @metaverse_locations.each do |location| %>
+        <%= link_to new_box_path(:location => location), class:'text-decoration-none' do %>
+          <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= image_path location.picture_path %>)">
+            <%= location.name %>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
 <% end %>
-
+  <%= link_to 'Go Back', begin_path, class:"btn secondary-cta-w" %>
 
   <div>
 <h2>Our Pricings</h2>

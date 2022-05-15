@@ -12,7 +12,10 @@
 }
 
 .secondary-cta-w {
-    @include secondary-cta-w
+    @include secondary-cta-w;
+    &:focus {
+        box-shadow: none;
+    }
 }
 
 .btn-xl {

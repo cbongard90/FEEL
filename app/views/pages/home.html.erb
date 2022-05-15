@@ -10,8 +10,8 @@
                 </h1>
 
                 <div class="main-btn-container my-4">
-                    <%= link_to 'Get Started', new_box_path, class: "btn header-cta" %>
-                    <%= link_to new_box_path, class:'btn header-cta-arrow' do %>
+                    <%= link_to 'Get Started', begin_path, class: "btn header-cta" %>
+                    <%= link_to begin_path, class:'btn header-cta-arrow' do %>
                         <i class="fa-solid fa-chevron-right"></i>
                     <% end %>
                 </div>
@@ -48,7 +48,7 @@
             </div>
         </div>
     </section>
-    
+
     <div>
       <h2>
         How to start building your legacy with Feel Beyond?
@@ -58,19 +58,16 @@
       <div class="cards">
 
         <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= image_path 'photography-bed.jpg' %>)">
-          <%= link_to 'What is a digital legacy?', new_box_path %>
+          <%= link_to 'What is a digital legacy?', begin_path %>
         </div>
 
         <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= image_path 'family-photography.jpg' %>)">
-          <%= link_to 'A message to Future Generations', new_box_path %>
+          <%= link_to 'A message to Future Generations', begin_path %>
         </div>
 
         <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= image_path 'wedding-photography.jpg' %>)">
-          <%= link_to 'Preserving your life story', new_box_path %>
+          <%= link_to 'Preserving your life story', begin_path %>
         </div>
       </div>
     </div>
 </div>
-
-
-

@@ -14,12 +14,11 @@ Location.destroy_all
 User.destroy_all
 
 # Seeds Users
-
-puts "Creating 1 admin"
+puts "Creating 1 standard user"
 user1 = User.new(email: "test@test.com", password: "password", name:"Test", surname:"Test")
 user1.save
 
-puts "Creating 1 standard user"
+puts "Creating 1 admin"
 admin1 = User.new(email: "admin@test.com", password: "password", name:"Test", surname:"Test", admin: true)
 admin1.save
 
@@ -170,9 +169,9 @@ Location.create!(
 puts "Locations on Outer Space booked!"
 
 Location.create!(
-  name: "Moon",
+  name: "Mars",
   environment: "outer space",
-  picture_path: "Moon.jpg"
+  picture_path: "mars.jpg"
 )
 
 puts "Locations on Outer Space booked!"
