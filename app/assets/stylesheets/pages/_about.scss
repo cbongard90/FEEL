@@ -8,6 +8,7 @@
         width: 100%;
 
         .about-main {
+            text-align: left !important;
             h1 {
                 @include main-header-style-w
             }
@@ -17,6 +18,10 @@
             }
         }
     }
+}
+
+.container.about-content {
+    text-align: left !important;
 }
 
 .card-icon {
