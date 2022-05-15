@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get 'about', to: 'pages#about'
   get 'contact', to: 'pages#contact'
   get 'begin', to: 'pages#begin'
+  get 'payement', to: 'pages#payement'
   resources :boxes, path: :capsules
   resources :receivers
   resources :locations

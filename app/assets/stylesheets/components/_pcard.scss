@@ -1,0 +1,80 @@
+
+
+
+.card, .card__title, .card__btn {
+    transition: all .1s ease;
+}
+
+.card {
+  width: 300px;
+  height: 350px;
+  margin-left: 2rem;
+  border-radius: 7px;
+  border: 3px solid $black;
+  color: $black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  &__title {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  &__price {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-top: 2rem;
+    sup {
+      font-size: 1rem;
+      font-weight: 400;
+    }
+  }
+
+  &__btn {
+    font-size: 1rem;
+    font-weight: 600;
+    background: none;
+    cursor: pointer;
+    padding: .5rem 3rem;
+    margin: 2rem;
+    border: 3px solid $black;
+    border-radius: 5px;
+    color: $black;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    background: #ededf0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    top: 1rem;
+    left: 1rem;
+    border-radius: 7px;
+  }
+}
+
+.card:hover {
+  border: 3px solid #7000FF;
+  background: rgba(255,255,255, 1);
+  cursor: pointer;
+
+  .card__title {
+    transform: translateY(-10px);
+  }
+
+  .card__btn {
+    background: #7000FF;
+    border: 3px solid #7000FF;
+    color: white;
+    transform: scale(1.05);
+  }
+
+  &::after {
+    background: #c4c6fc;
+  }
+}
