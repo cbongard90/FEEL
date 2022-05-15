@@ -13,4 +13,7 @@ class PagesController < ApplicationController
 
   def begin
   end
+
+  def payement
+  end
 end
