@@ -1,8 +1,7 @@
 <div class="container">
-  <h1>Select your location</h1>
 </div>
   <% if (params[:type] == 'earth') %>
-    <p class="text-align-center">Welcome to Earth</p>
+    <h1 class="text-center mx-auto pb-3">Select one of our location on our Mother Earth to keep your memories</h1>
 
       <div id="map" class="mx-auto"
             data-controller="mapbox"
@@ -15,7 +14,7 @@
 
 
   <% elsif (params[:type] == 'outer space') %>
-    <p>Welcome to Outer Space</p>
+    <h1 class="text-center mx-auto pb-3">Make your memories go to infinity and beyond</h1>
     <div class="container">
       <div class="cards">
         <% @space_locations.each do |location| %>
@@ -28,7 +27,7 @@
       </div>
     </div>
   <% else %>
-    <p>Welcome to MetaVerse</p>
+    <h1 class="text-center mx-auto pb-3">Let your memories stay in the digital world</h1>
     <div class="container">
       <div class="cards">
         <% @metaverse_locations.each do |location| %>
@@ -59,7 +58,7 @@
           <% if package.package_type == params[:type] %>
             <div class="pk-card">
               <div class="card-titles mb-2">
-                <h2>Basic</h2>
+                <h2 class="text-capitalize"><%= package.size %></h2>
                 <p class="price">$<%= package.base_price %></p>
                 <h3>Limited access</h3>
               </div>
