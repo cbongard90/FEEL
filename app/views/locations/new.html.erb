@@ -42,17 +42,17 @@
   <%= link_to 'Go Back', begin_path, class:"btn secondary-cta-w" %>
 
   <div>
-<h2>Our Pricings</h2>
-  <ul>
-  <% @packages.each do |package|%>
-      <% if package.package_type == params[:type] %>
-        <li>
-          <p>
-            <%= package.size %>
-            <%= package.base_price %>
-          </p>
-        </li>
-      <% end %>
-    <% end %>
-  </ul>
+    <h2>Our Pricings</h2>
+      <ul>
+      <% @packages.each do |package|%>
+          <% if package.package_type == params[:type] %>
+            <li>
+              <p>
+                <%= package.size %>
+                <%= package.base_price %>
+              </p>
+            </li>
+          <% end %>
+        <% end %>
+      </ul>
   </div>

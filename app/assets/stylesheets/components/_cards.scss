@@ -1,0 +1,50 @@
+.cards-container {
+    display: flex;
+    gap: 20px;
+}
+
+.card:nth-child(2) {
+    background: linear-gradient(to right, #1C63DD, #6880FD );
+    color: white;
+    border: none;
+    .access-list .fa-check {
+        color: white;
+    }
+
+    price {
+        color: white;
+    }
+    .card {
+        text-align: center;
+        line-height: 1.6;
+        border: 3px solid #1C63DD;
+        padding: 20px;
+        border-radius: 15px;
+        width: 250px;
+    
+        .price {
+            color: #1C63DD;
+            font-size: 26px;
+            font-weight: 700;
+        }
+        
+        .access-list {
+            p {
+                line-height: 0.3;
+            }
+
+            .fa-check {
+                color: #1C63DD;
+            }
+            
+            .fa-times {
+                color: rgb(255, 69, 58);
+            }
+        }
+        
+    }
+    
+}
+
+
+
