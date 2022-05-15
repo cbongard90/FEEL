@@ -16,5 +16,8 @@
   }
   
   #intro {
-    margin-bottom: 50px;
+      h2 {
+          @include secondary-header-style
+      }
+      margin-bottom: 50px;
   }

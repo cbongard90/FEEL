@@ -41,29 +41,9 @@
 <% end %>
   <%= link_to 'Go Back', begin_path, class:"btn secondary-cta-w" %>
 
-  <%
-=begin%>
- <div>
-    <h2>Our Pricings</h2>
-      <ul>
-      <% @packages.each do |package|%>
-          <% if package.package_type == params[:type] %>
-            <li>
-              <p>
-                <%= package.size %>
-                <%= package.base_price %>
-              </p>
-            </li>
-          <% end %>
-        <% end %>
-      </ul>
-  </div> 
-<%
-=end%>
-
   <div class="container">
       <div id="intro">
-        <h1>Pricing plan</h1>
+        <h2 class="mb-2">Pricing plan</h2>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti saepe commodi recusandae perferendis consequatur
           possimus maxime illum deleniti atque quaerat?</p>
       </div>
@@ -72,7 +52,7 @@
       <% @packages.each do |package|%>
           <% if package.package_type == params[:type] %>
             <div class="card">
-              <div class="card-titles">
+              <div class="card-titles mb-2">
                 <h2>Basic</h2>
                 <p class="price">$<%= package.base_price %></p>
                 <h3>Limited access</h3>
