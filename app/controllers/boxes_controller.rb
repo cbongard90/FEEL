@@ -1,5 +1,5 @@
 class BoxesController < ApplicationController
-  before_action :set_box, only: %i[show edit create]
+  before_action :set_box, only: %i[show edit]
 
   def index
     @boxes = Box.all
@@ -35,6 +35,6 @@ class BoxesController < ApplicationController
   end
 
   def box_params
-    params.require(:box).permit(:message, :user_id)
+    params.require(:box).permit(:message, :is_public, :user_id, :receiver_name, documents: [])
   end
 end

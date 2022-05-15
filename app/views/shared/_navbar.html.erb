@@ -10,12 +10,18 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
+        <li class="nav-item active">
+          <%= link_to "About", about_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Contact", contact_path, class: "nav-link" %>
+        </li>
         <% if user_signed_in? %>
           <li class="nav-item active">
-            <%= link_to "About", about_path, class: "nav-link" %>
+            <%= link_to "View Capsules", boxes_path, class: "nav-link" %>
           </li>
           <li class="nav-item">
-            <%= link_to "Contact", contact_path, class: "nav-link" %>
+            <%= link_to "Create Capsule", begin_path, class: "nav-link" %>
           </li>
           <% end %>
           <li class="nav-item dropdown">
