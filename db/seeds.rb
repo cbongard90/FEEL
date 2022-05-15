@@ -118,14 +118,6 @@ Location.create!(
 )
 
 Location.create!(
-  name: "Eiffel Tower",
-  environment: "earth",
-  latitude: 48.858370,
-  longitude: 2.294481,
-  picture_path: "Eiffel_Tower.jpg"
-)
-
-Location.create!(
   name: "Empire State Building",
   environment: "earth",
   latitude: 40.748441,
@@ -148,6 +140,87 @@ Location.create!(
   longitude: 15.491325,
   picture_path: "Svalbard_Global_Seed_Vault.jpg"
 )
+
+Location.create!(
+  name: "Haiku Stairs",
+  environment: "earth",
+  latitude: 21.402251,
+  longitude: -157.8237,
+  picture_path: "Haiku_Stairs.jpg"
+)
+
+Location.create!(
+  name: "Glass Beach",
+  environment: "earth",
+  latitude: 39.452717,
+  longitude: -123.813866,
+  picture_path: "Glass_Beach.jpg"
+)
+
+Location.create!(
+  name: "Etretat Cliffs",
+  environment: "earth",
+  latitude: 49.707762,
+  longitude: 0.201043,
+  picture_path: "Etretat_Cliffs.jpg"
+)
+
+Location.create!(
+  name: "Salar de Uyuni",
+  environment: "earth",
+  latitude: -20.266562,
+  longitude: -67.620552,
+  picture_path: "Salar_de_Uyuni.jpg"
+)
+
+Location.create!(
+  name: "Volcano Kamchatka",
+  environment: "earth",
+  latitude: -20.266562,
+  longitude: -67.620552,
+  picture_path: "Volcano_Kamchatka.jpg"
+)
+
+Location.create!(
+  name: "Horseshoe Bend",
+  environment: "earth",
+  latitude: 36.2292338,
+  longitude: -91.7643127,
+  picture_path: "Horseshoe_Bend.jpg"
+)
+
+Location.create!(
+  name: "Zhangye Danxia Park",
+  environment: "earth",
+  latitude: 38.913769,
+  longitude: 100.133240,
+  picture_path: "Zhangye_Danxia_Park.jpg"
+)
+
+Location.create!(
+  name: "Victoria Falls",
+  environment: "earth",
+  latitude: -17.924444,
+  longitude: 25.856667,
+  picture_path: "Victoria_Falls.jpg"
+)
+
+Location.create!(
+  name: "Great Blue Hole",
+  environment: "earth",
+  latitude: 17.316010,
+  longitude: -87.5351037,
+  picture_path: "Great_Blue _Hole.jpg"
+)
+
+Location.create!(
+  name: "Lake Hillier ",
+  environment: "earth",
+  latitude: -34.094536,
+  longitude: 123.202792,
+  picture_path: "Lake_Hillier.jpg"
+)
+
 
 # Seed Locations Space
 
