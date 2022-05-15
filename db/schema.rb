@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_05_14_212328) do
+ActiveRecord::Schema.define(version: 2022_05_15_031329) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -50,6 +50,11 @@ ActiveRecord::Schema.define(version: 2022_05_14_212328) do
     t.datetime "updated_at", precision: 6, null: false
     t.boolean "is_public"
     t.string "receiver_name"
+    t.string "storage_duration"
+    t.date "start_date"
+    t.integer "price"
+    t.bigint "location_id", null: false
+    t.index ["location_id"], name: "index_boxes_on_location_id"
     t.index ["user_id"], name: "index_boxes_on_user_id"
   end
 
@@ -123,6 +128,7 @@ ActiveRecord::Schema.define(version: 2022_05_14_212328) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "boxes", "locations"
   add_foreign_key "boxes", "users"
   add_foreign_key "location_packages", "locations"
   add_foreign_key "location_packages", "packages"

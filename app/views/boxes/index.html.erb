@@ -1,7 +1,6 @@
-<%= link_to 'Start your legacy', new_box_path, class: "btn btn-primary btn-block" %>
-
-
-<h1>Box List</h1>
-<% @boxes.each do |box| %>
-  <%= link_to box.message, box %>
-<% end %>
+<div class="container">
+  <h1>You currently have <%= pluralize(@boxes.count, "capsule") %> in your inventory</h1>
+  <% @boxes.each do |box| %>
+    <%= link_to box.message, box %>
+  <% end %>
+</div>
