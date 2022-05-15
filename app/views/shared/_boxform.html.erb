@@ -8,7 +8,7 @@
     <%= f.input :start_date %>
     <%= f.input :storage_duration, :collection => ['1 year', '5 years', '20 years', '50 years', '100 years', '200 years', '500 years', '1000 years', 'Forever'] %>
     <%= hidden_field_tag 'location', params[:location] %>
-    <%= f.submit class:"btn btn-flat btn-lg btn-block"%>
+    <%= f.submit class:"btn secondary-cta"%>
   <% end %>
 </div>
 </div>
