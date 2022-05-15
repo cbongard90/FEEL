@@ -4,7 +4,7 @@ class LocationsController < ApplicationController
     @locations = Location.all
     @packages = Package.all
     @earth_locations = Location.where(environment: "earth")
-    @metaverse = Location.where(environment: "metaverse").first
+    @metaverse_locations = Location.where(environment: "metaverse")
     @space_locations = Location.where(environment: "outer space")
     @markers = @earth_locations.map do |location|
       {

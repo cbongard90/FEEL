@@ -3,6 +3,7 @@
     <%= f.input :message %>
     <%= f.input :is_public %>
     <%= f.input :receiver_name %>
+    <%= f.input :documents, as: :file, input_html: { multiple: true } %>
     <%= f.submit class:"btn btn-flat btn-lg btn-block"%>
   <% end %>
 </div>

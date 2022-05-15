@@ -1,5 +1,6 @@
 <h2><%= location.name %></h2>
+<%= image_tag(location.picture_path) %>
 <p><%= location.latitude %></p>
 <p><%= location.longitude %></p>
 
-<%= link_to "Choose Location", new_box_path(:location => location), class:"btn btn-primary btn-block"%>
+<%= link_to "Drop Capsule Here", new_box_path(:location => location), class:"btn secondary-cta-w"%>

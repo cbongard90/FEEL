@@ -58,10 +58,6 @@ addEventListener("direct-upload:end", event => {
   element.classList.add("direct-upload--complete")
 })
 
-
-
-
-
 function initTextAnimation(sentences, typingInterval = 100, sentenceInterval = 2000, customTarget = null) {
       const target = customTarget !== null ? customTarget : document.querySelector("#animation-target");
       let sentenceIndex = 1;
@@ -88,4 +84,3 @@ function initTextAnimation(sentences, typingInterval = 100, sentenceInterval = 2
 // 3ème param (optionnel) : temps en ms entre chaque changement de phrase
 // 4ème param (optionnel) : si tu veux utiliser un autre élément du dom (c'est à dire un noeud HTML sans l'id "animation-target", tu peux faire un document.getElement... et envoyer la valeur dans ce 4ème paramètre)
 initTextAnimation(["INTERACTIVE", "DIGITAL", "EVERLASTING"], 100, 3000);
-
