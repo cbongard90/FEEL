@@ -1,9 +1,14 @@
-<div class="form-item p-4">
+<div class="container">
+<div class="p-5 mx-auto" style="width: 800px;" >
   <%= simple_form_for ([@box]) do |f| %>
     <%= f.input :message %>
     <%= f.input :is_public %>
     <%= f.input :receiver_name %>
     <%= f.input :documents, as: :file, input_html: { multiple: true } %>
+    <%= f.input :start_date %>
+    <%= f.input :storage_duration, :collection => ['1 year', '5 years', '20 years', '50 years', '100 years', '200 years', '500 years', '1000 years', 'Forever'] %>
+    <%= hidden_field_tag 'location', params[:location] %>
     <%= f.submit class:"btn btn-flat btn-lg btn-block"%>
   <% end %>
+</div>
 </div>

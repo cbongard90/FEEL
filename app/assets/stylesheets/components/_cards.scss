@@ -1,8 +1,8 @@
-.cards-container {
+.pk-cards-container {
     display: flex;
     gap: 20px;
 
-    .card:nth-child(2) {
+    .pk-card:nth-child(2) {
         background: linear-gradient(to right, $primaryColor, $bluejeans );
         color: white;
         border: none;
@@ -16,7 +16,7 @@
         
     }
 
-    .card {
+    .pk-card {
         text-align: center;
         line-height: 1.6;
         border: 3px solid $primaryColor;

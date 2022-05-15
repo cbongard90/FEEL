@@ -18,6 +18,7 @@ class BoxesController < ApplicationController
   def create
     @box = Box.new(box_params)
     @box.user_id = current_user.id
+    @box.location_id = params[:location]
 
     if @box.save
       redirect_to @box
