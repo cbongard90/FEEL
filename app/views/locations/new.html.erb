@@ -54,10 +54,10 @@
           possimus maxime illum deleniti atque quaerat?</p>
       </div>
 
-      <div class="cards-container">
+      <div class="pk-cards-container">
       <% @packages.each do |package|%>
           <% if package.package_type == params[:type] %>
-            <div class="card">
+            <div class="pk-card">
               <div class="card-titles mb-2">
                 <h2>Basic</h2>
                 <p class="price">$<%= package.base_price %></p>

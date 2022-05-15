@@ -1,9 +1,9 @@
-.cards-container {
+.pk-cards-container {
     display: flex;
     gap: 20px;
 
-    .card:nth-child(2) {
-        background: linear-gradient(to right, $primaryColor, $bluejeans );
+    .pk-card:nth-child(2) {
+        background: $primaryColor;
         color: white;
         border: none;
         .access-list .fa-check {
@@ -16,7 +16,7 @@
         
     }
 
-    .card {
+    .pk-card {
         text-align: center;
         line-height: 1.6;
         border: 3px solid $primaryColor;
@@ -40,7 +40,7 @@
             }
             
             .fa-times {
-                color: rgb(255, 69, 58);
+                color: $primaryColor1;
             }
         }
         
