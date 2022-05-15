@@ -1,11 +1,11 @@
 
 
 
-.card, .card__title, .card__btn {
+.pcard, .pcard__title, .pcard__btn {
     transition: all .1s ease;
 }
 
-.card {
+.pcard {
   width: 300px;
   height: 350px;
   margin-left: 2rem;
@@ -58,16 +58,16 @@
   }
 }
 
-.card:hover {
+.pcard:hover {
   border: 3px solid #7000FF;
   background: rgba(255,255,255, 1);
   cursor: pointer;
 
-  .card__title {
+  .pcard__title {
     transform: translateY(-10px);
   }
 
-  .card__btn {
+  .pcard__btn {
     background: #7000FF;
     border: 3px solid #7000FF;
     color: white;
