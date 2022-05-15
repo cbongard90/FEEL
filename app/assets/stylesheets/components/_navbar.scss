@@ -3,6 +3,9 @@
   position: sticky;
   top: 0;
   z-index: 5;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.151);
+
 
   .avatar-bordered {
     width: 40px;
@@ -21,6 +24,7 @@
 .nav-link {
   color: #fff !important;
   transition: all 0.3s ease;
+  padding-right: 1.5rem !important;
 
   &:hover {
     color: $primaryColor !important;
