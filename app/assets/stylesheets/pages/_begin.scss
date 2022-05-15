@@ -10,5 +10,9 @@
         justify-content: center;
         flex-direction: column;
         height: 100%;
+
+        h2 {
+            @include secondary-header-style-w 
+        }
     }
 }
