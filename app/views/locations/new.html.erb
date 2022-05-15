@@ -1,9 +1,10 @@
 <div class="container">
-  <h1>Select your location</h1>
+  <h1>Pick the nicest spot for your Time Capsule</h1>
 </div>
   <% if (params[:type] == 'earth') %>
-    <p class="text-align-center">Welcome to Earth</p>
 
+    <h2 class="text-center">Welcome to our beautiful planet</h2>
+    <br>
       <div id="map" class="mx-auto"
             data-controller="mapbox"
             data-mapbox-markers-value="<%= @markers.to_json %>"
@@ -15,7 +16,8 @@
 
 
   <% elsif (params[:type] == 'outer space') %>
-    <p>Welcome to Outer Space</p>
+    <h2>Welcome to the unxplored universe</h2>
+    <br>
     <div class="container">
       <div class="cards">
         <% @space_locations.each do |location| %>
@@ -28,7 +30,8 @@
       </div>
     </div>
   <% else %>
-    <p>Welcome to MetaVerse</p>
+    <h2>Welcome to the new age of the MetaVerse</h2>
+    <br>
     <div class="container">
       <div class="cards">
         <% @metaverse_locations.each do |location| %>
@@ -49,9 +52,9 @@
 
   <div class="container">
       <div id="intro">
-        <h2 class="mb-2">Pricing plan</h2>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti saepe commodi recusandae perferendis consequatur
-          possimus maxime illum deleniti atque quaerat?</p>
+        <h2 class="mb-2">How Much is Your Legacy Worth?</h2>
+        <h3 class="mb-2">No Subscription Pricing Plan</h3>
+        <p>Get started and create your everlasting Digital Legacy by booking your Time Capsule.</p>
       </div>
 
       <div class="pk-cards-container">
@@ -61,15 +64,35 @@
               <div class="card-titles mb-2">
                 <h2>Basic</h2>
                 <p class="price">$<%= package.base_price %></p>
-                <h3>Limited access</h3>
-              </div>
 
-              <div class="access-list">
-                <p><i class="fas fa-check"></i> Lorem, ipsum dolor</p>
-                <p><i class="fas fa-check"></i> Lorem, ipsum dolor</p>
-                <p><i class="fas fa-check"></i> Lorem, ipsum dolor</p>
-                <p><i class="fas fa-check"></i> Lorem, ipsum</p>
-                <p><i class="fas fa-times"></i> Lorem, ipsum dolor</p>
+                <% if package.size == 'Basic' %>
+                  <h3>Limited access</h3>
+                    <div class="access-list">
+                      <p><i class="fas fa-check"></i>Media content basic</p>
+                      <p><i class="fas fa-check"></i>1 Guardian</p>
+                      <p><i class="fas fa-times"></i>Online Assistance</p>
+                      <p><i class="fas fa-times"></i>3D & VR Content</p>
+                      <p><i class="fas fa-times"></i>Personalized Delivery</p>
+                    </div>
+                <% elsif package.size == 'Standard' %>
+                  <h3>Limited access</h3>
+                    <div class="access-list">
+                      <p><i class="fas fa-check"></i> Media content basic</p>
+                      <p><i class="fas fa-check"></i> 5 Guardian</p>
+                      <p><i class="fas fa-check"></i> Online Assistance</p>
+                      <p><i class="fas fa-check"></i> 3D & VR Content</p>
+                      <p><i class="fas fa-times"></i> Personalized Delivery</p>
+                    </div>
+                <% else %>
+                  <h3>Limited access</h3>
+                    <div class="access-list">
+                      <p><i class="fas fa-check"></i> Media content basic</p>
+                      <p><i class="fas fa-check"></i> 10 Guardian</p>
+                      <p><i class="fas fa-check"></i> Online Assistance</p>
+                      <p><i class="fas fa-check"></i> 3D & VR Content</p>
+                      <p><i class="fas fa-check"></i> Personalized Delivery</p>
+                    </div>
+                <% end %>
               </div>
             </div>
           <% end %>
