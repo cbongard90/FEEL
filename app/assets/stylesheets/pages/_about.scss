@@ -1,15 +1,27 @@
-.banner {
-    background: linear-gradient(-45deg,#5Ae3ed,#9263E3);
-    height: 90vh;
-    width: 98%;
-    border-radius: 15px;
-    h1 {
-        @include main-header-style
+.about-container {
+    height: 100vh;
+    .banner {
+        background: linear-gradient(-45deg,#5Ae3ed,#9263E3);
+        position: absolute;
+        top: 0;
+        height: 100vh;
+        width: 100%;
+
+        .about-main {
+            h1 {
+                @include main-header-style-w
+            }
+
+            p {
+                @include subtitle-style-w
+            }
+        }
     }
 }
+
 .card-icon {
     i {
-        font-size: 5rem;
+        font-size: 3rem;
         color: $primaryColor;
     }
 }
