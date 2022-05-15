@@ -3,6 +3,7 @@ class BoxesController < ApplicationController
 
   def index
     @boxes = Box.all
+    @boxes = @boxes.select { |box| box.user_id == current_user.id }
   end
 
   def show
