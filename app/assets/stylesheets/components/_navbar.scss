@@ -20,4 +20,10 @@
 
 .nav-link {
   color: #fff !important;
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: $primaryColor !important;
+    transform: scale(.9);
+  }
 }
