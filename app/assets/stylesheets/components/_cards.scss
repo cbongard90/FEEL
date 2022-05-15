@@ -3,7 +3,7 @@
     gap: 20px;
 
     .pk-card:nth-child(2) {
-        background: linear-gradient(to right, $primaryColor, $bluejeans );
+        background: $primaryColor;
         color: white;
         border: none;
         .access-list .fa-check {
@@ -40,7 +40,7 @@
             }
             
             .fa-times {
-                color: rgb(255, 69, 58);
+                color: $primaryColor1;
             }
         }
         
