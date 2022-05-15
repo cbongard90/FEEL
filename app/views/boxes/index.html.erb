@@ -1,6 +1,35 @@
 <div class="container">
   <h1>You currently have <%= pluralize(@boxes.count, "capsule") %> in your inventory</h1>
+
+<div class="cards mt-4">
   <% @boxes.each do |box| %>
-    <%= link_to box.message, box %>
+    <% location = Location.find(box.location_id) %>
+    <div class="card-trip">
+  <%= image_tag location.picture_path %>
+  <div class="card-trip-infos">
+    <div>
+      <h2><%= location.name %></h2>
+      <div class="text-start">
+        <% if location.environment == "earth" %>
+          <p>The coordinates of your capsule are as follows:</p>
+          <p class="ms-2">Latitude: <%= location.latitude %></p>
+          <p class="ms-2">Longitude: <%= location.longitude %></p>
+        <% elsif location.environment == "outer space" %>
+          <p>Your capsule is heading towards <%= location.name %></p>
+        <% elsif location.environment == "metaverse" %>
+          <p>Your capsule is being kept in <%= location.name %></p>
+        <% end %>
+        <p>Duration of the capsule storage: <%= box.storage_duration %></p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
   <% end %>
+</div>
+
+
+
+
 </div>

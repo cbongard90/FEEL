@@ -21,7 +21,8 @@ class BoxesController < ApplicationController
     @box.location_id = params[:location]
 
     if @box.save
-      redirect_to @box
+      # redirect to the index page
+      redirect_to boxes_path
     else
       render 'new'
     end
@@ -37,6 +38,14 @@ class BoxesController < ApplicationController
   end
 
   def box_params
-    params.require(:box).permit(:message, :is_public, :user_id, :receiver_name, documents: [])
+    params.require(:box)
+          .permit(:message,
+                  :is_public,
+                  :user_id,
+                  :receiver_name,
+                  :storage_duration,
+                  :start_date,
+                  :price,
+                  documents: [])
   end
 end
