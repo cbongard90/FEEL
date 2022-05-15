@@ -87,6 +87,7 @@ $moonSpinDurFast: $earthSpinDur * 1;
 .home-feel {
   &.container{
     max-width: 1070px;
+    background-color: #F4F4F4;
   }
 	.card-category {
 	  background-size: cover;
@@ -175,11 +176,12 @@ $bkT: rgba(0,0,0,0);
 	padding: 0;
 }
 .spinning-earth {
-	background: #000;
+	background: #F4F4F4;
 	font-size: 16px;
 	height: 50vh;
 	transform-style: preserve-3d;
 	perspective: 600px;
+  margin: 2%;
 }
 .earth, .moon {
 	border-radius: 50%;
